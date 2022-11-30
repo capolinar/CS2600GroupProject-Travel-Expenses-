@@ -76,4 +76,15 @@ void displayTotal(budget)
 	printf("Total Allowed Expenses for whole trip: %f\n", budget);
 }
 
-void display
+void displayExcess(total, budget)
+{
+	double excess = total - budget;
+	if(excess > 0)
+	{
+		printf("Excess: $%f\n", excess);
+	}
+	else
+	{
+		printf("Excess: $0.00\n");
+	}
+}
