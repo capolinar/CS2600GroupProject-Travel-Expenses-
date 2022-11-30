@@ -71,6 +71,7 @@ double conference, double hotel, double meals)
 	{
 		mealNum -= 3;
 	}
+	//meals needs to be combined with other calculation
 }
 
 
