@@ -137,5 +137,9 @@ double hotelFee() {
 // Allowed meals
 
 int mealFee() {
+    int mealFee;
+    printf("Enter Meal Fee: ");
+    scanf("%d", &mealFee);
 
+    return mealFee;
 }
