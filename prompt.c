@@ -86,7 +86,11 @@ int milesDriven() {
 // Returns parking fees
 
 double parkingFee() {
+    double parkingFee;
+    printf("Enter Parking Fee: ");
+    scanf("%f", &parkingFee);
 
+    return parkingFee;
 }
 // double taxiFee()
 // No parameter
@@ -94,7 +98,11 @@ double parkingFee() {
 // Returns taxi fees
 
 double taxiFee() {
+    double taxiFee;
+    printf("Enter Taxi Fee: ");
+    scanf("%f", &taxiFee);
 
+    return taxiFee;
 }
 
 // double conferenceFee()
@@ -103,8 +111,11 @@ double taxiFee() {
 // Returns conference fees
 
 double conferenceFee() {
+    double conferenceFee;
+    printf("Enter Conference Fee: ");
+    scanf("%f", &conferenceFee);
 
-
+    return conferenceFee;
 }
 
 // double hotelFee()
@@ -113,7 +124,11 @@ double conferenceFee() {
 // Returns conference fees
 
 double hotelFee() {
+    double hotelFee;
+    printf("Enter Hotel Fee: ");
+    scanf("%f", &hotelFee);
 
+    return hotelFee;
 }
 // int mealFee()
 // No parameter
