@@ -19,12 +19,12 @@ int main()
     taxi = taxiFee();
     conference = conferenceFee();
     hotel = hotelFee();
-    meals = mealFee();
+    meals = mealFee(); //meals need to be combined with calculating the amount of meals allowed.
 
     //calculate costs
     drivingCost = miles * MPH;
-    total = calcTotal(days, dTime, aTime, airfare, rents, miles, parking, taxi, conference, hotel, meals);
-    budget = calcTotalAllowed(days, dTime, aTime, airfare, rents, miles, parking, taxi, conference, hotel, meals);
+    total = calcTotal(days, dTime, aTime, airfare, rents, miles, parking, taxi, conference, hotel, meals); //rents to be changed to rental fees
+    budget = calcTotalAllowed(days, dTime, aTime, airfare, rents, miles, parking, taxi, conference, hotel, meals); //boolean for private vehicle use needed
     excess = calcExcess(days, dTime, aTime, airfare, rents, miles, parking, taxi, conference, hotel, meals);
 
     //display totals
