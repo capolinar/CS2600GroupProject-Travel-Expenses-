@@ -41,9 +41,17 @@ double conference, double hotel, double meals, int nights)
 	}
 
 	//allowable amounts for last day
-	if(arriveTime > 800)
+	if(arriveTime > 800 && arriveTime < 1300)
 	{
-		total += 9; 
+		total += 9; //breakfast if arrival after 8am 
+	}
+	else if(arriveTime > 1300 && arriveTime < 1900)
+	{
+		total += 12; //lunch if arrival after 1pm
+	}
+	else if(arrivteTime > 1900)
+	{
+		total += 16;//dinner if arrival after 7pm
 	}
 
 }
