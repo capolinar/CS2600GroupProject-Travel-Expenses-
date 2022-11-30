@@ -9,22 +9,29 @@ int totalDays() {
 	return totalDays;
 }
 
-// void departTime(int *departTime, int *arriveTime)
-// No return
-// Prompts user for departure time and arrival time
-// Sets pointers to these values
 
-void departTime(int *departTime, int *arriveTime) {
+
+void departTime() {
 	char buff[5];
-	scanf("Enter depart time:\n%s", &buff);
-	char * hour = strtok(buff, ":");
-	char * minute = strtok(NULL, ":");
+	int hour;
+	int minute;
+	printf("Enter depart time: ");
+	scanf("%s", &buff);
+	char *token = strtok(buff, ":");
+	token = strtok(NULL, ":");
 	// converting 24 hour to 12 hour
-	int *departTime = (((int)hour + 11) % 12 + 1) + (int)minute;
-
-
-	printf("Enter arrive time: ");
-
+	int departTime = ((hour + 11) % 12 + 1);
+	
+	// Keep printing tokens while one of the
+	// delimiters present in str[].
+	if (token != NULL)
+	{
+		hour = atoi(token);
+		token = strtok(NULL, ":");
+		minute = atoi(token);
+	}
+	// converting 24 hour to 12 hour
+	int *arriveTime = (((int)hour + 11) % 12 + 1) + (int)minute;
 }
 
 // double airFee()
