@@ -27,6 +27,26 @@ double conference, double hotel, double meals)
 {
 	double total;
 	total += totalMiles(miles) + cars + airfee + conference;//any amount allowed
+	if(parking > 6 * days)
+	{
+		total += 6 * days;
+	}
+	else
+	{
+		total += parking;
+
+	}
+
+	if(taxi > 10 * days)
+	{
+		total += 10* days;
+	}
+	else
+	{
+		total += taxi;
+
+	}
+	
 	double mealNum = days * 3;
 	if(departTime > 700 && departTime < 1200)
 	{
