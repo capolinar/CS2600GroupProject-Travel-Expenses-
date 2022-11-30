@@ -40,7 +40,11 @@ void departTime() {
 // Returns airfare price
 
 double airFee() {
+double airFee;
+printf("Enter air fee: ");
+scanf("%f", &airFee);
 
+return airFee;
 }
 
 // int carsRented()
@@ -49,7 +53,11 @@ double airFee() {
 // Returns number of cars rented
 
 int carsRented() {
+    int carsRent;
+printf("Enter total number of cars rented: ");
+scanf("%d", &carsRent);
 
+return carsRent;
 }
 
 // int milesDriven()
@@ -58,6 +66,17 @@ int carsRented() {
 // Returns miles driven
 
 int milesDriven() {
+    int miles = 0;
+    int input;
+    printf("Was a private vehicle used?\n(1) for Yes\n(2) for No");
+    scanf("%d", &input);
+    
+    if(input == 1) {
+        printf("Total Miles Driven: ");
+        scanf("%d", &miles);
+    }
+
+    return miles;
 
 }
 
