@@ -1,5 +1,6 @@
 #include <stdio.>
-#include "functionstitlehere.h"
+#include "travelFunctions.h"
+#include "prompt.h"
 #define MPH .27
 
 int main()
