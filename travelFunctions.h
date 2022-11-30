@@ -5,18 +5,18 @@ double totalMiles(miles) //27 cents per mile driven
 	return miles * .27;
 }
 
-double calcTotal(int days, int dTime, int aTime, double airFare, 
+double calcTotal(int days, int nights, int dTime, int aTime, double airFare, 
 int rentalFee, double miles, double parking, double taxi, 
-double conference, double hotel, double meals, int nights)
+double conference, double hotel, double meals)
 {
 	double total;
 	total += airFare + rentalFee + totalMiles(miles) + parking + taxi + conference
 	+ hotel + meals;
 }
 
-double calcTotalAllowed(int days, int dTime, int aTime, double airFare, 
+double calcTotalAllowed(int days, int nights, int dTime, int aTime, double airFare, 
 int rentalFee, double miles, double parking, double taxi, 
-double conference, double hotel, double meals, int nights)
+double conference, double hotel, double meals)
 {
 	double total;
 	total += totalMiles(miles) + airFare + rentalFee + conference;//amounts can vary
