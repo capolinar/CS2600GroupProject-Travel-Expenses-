@@ -10,36 +10,39 @@ int totalDays()
     return totalDays;
 }
 
-void departTime(int* departTime, int* arriveTime)
-{
-    char buff[5];
-
-    printf("Enter depart time: ");
-    scanf("%s", &buff);
-
-    // converting 24 hour to 12 hour
-    int dTime = getTime(buff);
-    &dTIme = departTime;
-
-    printf("Enter arrive time: ");
-    scanf("%s", &buff);
-    // converting 24 hour to 12 hour
-    int aTime = getTime(buff);
-    &aTime = arriveTime;
-}
-
-int getTime(char buff) {
+int getTime(char *buff) {
     int hour;
     int minute;
-    char* token = strtok(buff, ":");
+    char * token;
 
     if (token != NULL) {
+        token = strtok(buff, ":");
         hour = atoi(token);
         token = strtok(NULL, ":");
         minute = atoi(token);
     }
     return ((hour + 11) % 12 + 1) * 1000 + minute;
 }
+
+void departTime(int *departTime, int *arriveTime)
+{
+    char buff[5];
+
+    printf("Enter depart time: ");
+    scanf("%s", &buff);
+    
+    // converting 24 hour to 12 hour
+    int dTime = getTime(buff);
+    departTime = &dTime;
+
+    printf("Enter arrive time: ");
+    scanf("%s", &buff);
+    // converting 24 hour to 12 hour
+    int aTime = getTime(buff);
+    arriveTime = &aTime;
+}
+
+
 
 // double airFee()
 // No parameter
