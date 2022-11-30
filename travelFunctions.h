@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-double totalMiles(miles)
+double totalMiles(miles) //27 cents per mile driven
 {
 	return miles * .27;
 }
@@ -85,7 +85,7 @@ void displayExcess(total, budget)
 	}
 	else //if there was any savings
 	{
-		excess *= -1;
+		excess *= -1; //convert negative excess into savings
 		printf("Saved: $%f\n", excess);
 	}
 }
