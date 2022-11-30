@@ -46,6 +46,16 @@ double conference, double hotel, double meals)
 		total += taxi;
 
 	}
+
+	if(hotel > 90 * days)
+	{
+		total += 90 * days;
+	}
+	else
+	{
+		total += hotel;
+
+	}
 	
 	double mealNum = days * 3;
 	if(departTime > 700 && departTime < 1200)
