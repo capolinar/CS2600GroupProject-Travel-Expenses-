@@ -24,6 +24,14 @@ double conference, double hotel, double meals, int nights)
 	total += 10 * days;//max amount for taxi a day
 	total += 90 * nights;//max amount for each hotel night
 
+	int fullDays = 0;//days with no travel
+	if(days > 2)
+	{
+		fullDays = days -2 //travel days not including first or last;
+
+	}
+	total += fullDays * 37; //37 is total $ allowed for breakfast, lunch and dinner
+
 	//meal costs depend on time
 	//allowable amounts for first day
 	if(departTime < 700)
@@ -49,10 +57,12 @@ double conference, double hotel, double meals, int nights)
 	{
 		total += 12; //lunch if arrival after 1pm
 	}
-	else if(arrivteTime > 1900)
+	else if(arriveTime > 1900)
 	{
 		total += 16;//dinner if arrival after 7pm
 	}
+
+	return total;
 
 }
 
