@@ -5,21 +5,21 @@ double totalMiles(miles)
 	return miles * .27;
 }
 
-double calcTotal(int days, int departTime, int arriveTime, double airfee, 
+double calcTotal(int days, int dTime, int aTime, double airFare, 
 int rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals, int nights)
 {
 	double total;
-	total += airfee + rentalFee + totalMiles(miles) + parking + taxi + conference
+	total += airFare + rentalFee + totalMiles(miles) + parking + taxi + conference
 	+ hotel + meals;
 }
 
-double calcTotalAllowed(int days, int departTime, int arriveTime, double airfee, 
+double calcTotalAllowed(int days, int dTime, int aTime, double airFare, 
 int rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals, int nights)
 {
 	double total;
-	total += totalMiles(miles) + airfee + rentalFee + conference;//amounts can vary
+	total += totalMiles(miles) + airFare + rentalFee + conference;//amounts can vary
 	total += 6 * days; //max amount for parking a day
 	total += 10 * days;//max amount for taxi a day
 	total += 90 * nights;//max amount for each hotel night
@@ -34,30 +34,30 @@ double conference, double hotel, double meals, int nights)
 
 	//meal costs depend on time
 	//allowable amounts for first day
-	if(departTime < 700)
+	if(dTime < 700)
 	{
 		total += 9; //breakfast if before 7am
 	}
-	else if(departTime > 700 && departTime < 1200)
+	else if(dTime > 700 && dTime < 1200)
 	{
 		total += 12; //lunch if before 12pm
 
 	}
-	else if(departTime > 1200 && departTime < 1800)
+	else if(dTime > 1200 && dTime < 1800)
 	{
 		total += 16; //dinner if before 6pm
 	}
 
 	//allowable amounts for last day
-	if(arriveTime > 800 && arriveTime < 1300)
+	if(aTime > 800 && aTime < 1300)
 	{
 		total += 9; //breakfast if arrival after 8am 
 	}
-	else if(arriveTime > 1300 && arriveTime < 1900)
+	else if(aTime > 1300 && aTime < 1900)
 	{
 		total += 12; //lunch if arrival after 1pm
 	}
-	else if(arriveTime > 1900)
+	else if(aTime > 1900)
 	{
 		total += 16;//dinner if arrival after 7pm
 	}
