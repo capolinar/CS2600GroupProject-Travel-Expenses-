@@ -6,27 +6,29 @@ double totalMiles(miles)
 }
 
 double calcTotal(int days, int departTime, int arriveTime, double airfee, 
-int cars, double miles, double parking, double taxi, 
+int rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals)
 {
 	double total;
-	total += airfee + cars + totalMiles(miles) + parking + taxi + conference
-	+ hotel + mealFee();
+	total += airfee + rentalFee + totalMiles(miles) + parking + taxi + conference
+	+ hotel + meals;
 }
 
 double calcTotalAllowed(int days, int departTime, int arriveTime, double airfee, 
-int cars, double miles, double parking, double taxi, 
+int rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals)
 {
+	double total;
+	total += totalMiles(miles) + air
 }
 
 
 double calcExcess(int days, int departTime, int arriveTime, double airfee, 
-int cars, double miles, double parking, double taxi, 
+int rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals)
 {
 	double total;
-	total += totalMiles(miles) + cars + airfee + conference;//any amount allowed
+	total += totalMiles(miles) + rentalFee + airfee + conference;//any amount allowed
 	if(parking > 6 * days)
 	{
 		total += 6 * days;
