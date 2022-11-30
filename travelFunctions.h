@@ -79,12 +79,13 @@ void displayTotal(budget)
 void displayExcess(total, budget)
 {
 	double excess = total - budget;
-	if(excess > 0)
+	if(excess >= 0) //if there was excess
 	{
-		printf("Excess: $%f\n", excess);
+		printf("Excess: $%f\n", excess); 
 	}
-	else
+	else //if there was any savings
 	{
-		printf("Excess: $0.00\n");
+		excess *= -1;
+		printf("Saved: $%f\n", excess);
 	}
 }
