@@ -65,3 +65,15 @@ double conference, double hotel, double meals, int nights)
 	return total;
 
 }
+
+void displayTotal(total)
+{
+	printf("Total Expenses for whole trip: %f\n", total);
+}
+
+void displayTotal(budget)
+{
+	printf("Total Allowed Expenses for whole trip: %f\n", budget);
+}
+
+void display
