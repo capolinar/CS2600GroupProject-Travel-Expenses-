@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 
 int totalDays() {
 	int totalDays = 0;
@@ -17,8 +17,9 @@ void departTime() {
 	int minute;
 	printf("Enter depart time: ");
 	scanf("%s", &buff);
-	char *token = strtok(buff, ":");
-	token = strtok(NULL, ":");
+
+        c
+    }
 	// converting 24 hour to 12 hour
 	int departTime = ((hour + 11) % 12 + 1);
 	
