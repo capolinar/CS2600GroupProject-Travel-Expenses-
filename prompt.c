@@ -21,7 +21,7 @@ int getTime(char *buff) {
         token = strtok(NULL, ":");
         minute = atoi(token);
     }
-    return ((hour + 11) % 12 + 1) * 1000 + minute;
+    return ((hour + 11) % 12 + 1) * 100 + minute;
 }
 
 void departTime(int *departTime, int *arriveTime)
@@ -33,13 +33,13 @@ void departTime(int *departTime, int *arriveTime)
     
     // converting 24 hour to 12 hour
     int dTime = getTime(buff);
-    departTime = &dTime;
+    *departTime = dTime;
 
     printf("Enter arrive time: ");
     scanf("%s", &buff);
     // converting 24 hour to 12 hour
     int aTime = getTime(buff);
-    arriveTime = &aTime;
+    *arriveTime = aTime;
 }
 
 
