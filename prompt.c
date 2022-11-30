@@ -1,38 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int totalDays() {
-	int totalDays = 0;
-	printf("Enter the number of days spent on the trip: ");
-	scanf("%d", &totalDays);
+int totalDays()
+{
+    int totalDays = 0;
+    printf("Enter the number of days spent on the trip: ");
+    scanf("%d", &totalDays);
 
-	return totalDays;
+    return totalDays;
 }
 
+void departTime(int* departTime, int* arriveTime)
+{
+    char buff[5];
 
+    printf("Enter depart time: ");
+    scanf("%s", &buff);
 
-void departTime() {
-	char buff[5];
-	int hour;
-	int minute;
-	printf("Enter depart time: ");
-	scanf("%s", &buff);
+    // converting 24 hour to 12 hour
+    int dTime = getTime(buff);
+    &dTIme = departTime;
 
-        c
+    printf("Enter arrive time: ");
+    scanf("%s", &buff);
+    // converting 24 hour to 12 hour
+    int aTime = getTime(buff);
+    &aTime = arriveTime;
+}
+
+int getTime(char buff) {
+    int hour;
+    int minute;
+    char* token = strtok(buff, ":");
+
+    if (token != NULL) {
+        hour = atoi(token);
+        token = strtok(NULL, ":");
+        minute = atoi(token);
     }
-	// converting 24 hour to 12 hour
-	int departTime = ((hour + 11) % 12 + 1);
-	
-	// Keep printing tokens while one of the
-	// delimiters present in str[].
-	if (token != NULL)
-	{
-		hour = atoi(token);
-		token = strtok(NULL, ":");
-		minute = atoi(token);
-	}
-	// converting 24 hour to 12 hour
-	int *arriveTime = (((int)hour + 11) % 12 + 1) + (int)minute;
+    return ((hour + 11) % 12 + 1) * 1000 + minute;
 }
 
 // double airFee()
@@ -40,12 +46,13 @@ void departTime() {
 // Prompts user for the cost of airfare
 // Returns airfare price
 
-double airFee() {
-double airFee;
-printf("Enter air fee: ");
-scanf("%f", &airFee);
+double airFee()
+{
+    double airFee;
+    printf("Enter air fee: ");
+    scanf("%f", &airFee);
 
-return airFee;
+    return airFee;
 }
 
 // int carsRented()
@@ -53,12 +60,13 @@ return airFee;
 // Prompts user for total number of cars rented
 // Returns number of cars rented
 
-int carsRented() {
+int carsRented()
+{
     int carsRent;
-printf("Enter total number of cars rented: ");
-scanf("%d", &carsRent);
+    printf("Enter total number of cars rented: ");
+    scanf("%d", &carsRent);
 
-return carsRent;
+    return carsRent;
 }
 
 // int milesDriven()
@@ -66,19 +74,19 @@ return carsRent;
 // Prompts user for total miles driven (if using private vehicle)
 // Returns miles driven
 
-int milesDriven() {
+int milesDriven()
+{
     int miles = 0;
     int input;
     printf("Was a private vehicle used?\n(1) for Yes\n(2) for No");
     scanf("%d", &input);
-    
-    if(input == 1) {
+
+    if (input == 1) {
         printf("Total Miles Driven: ");
         scanf("%d", &miles);
     }
 
     return miles;
-
 }
 
 // double parkingFee()
@@ -86,7 +94,8 @@ int milesDriven() {
 // Prompts user for parking fees
 // Returns parking fees
 
-double parkingFee() {
+double parkingFee()
+{
     double parkingFee;
     printf("Enter Parking Fee: ");
     scanf("%f", &parkingFee);
@@ -98,7 +107,8 @@ double parkingFee() {
 // Prompts user for taxi fees
 // Returns taxi fees
 
-double taxiFee() {
+double taxiFee()
+{
     double taxiFee;
     printf("Enter Taxi Fee: ");
     scanf("%f", &taxiFee);
@@ -111,7 +121,8 @@ double taxiFee() {
 // Prompts user for conference fees
 // Returns conference fees
 
-double conferenceFee() {
+double conferenceFee()
+{
     double conferenceFee;
     printf("Enter Conference Fee: ");
     scanf("%f", &conferenceFee);
@@ -124,7 +135,8 @@ double conferenceFee() {
 // Prompts user for hotel fee
 // Returns conference fees
 
-double hotelFee() {
+double hotelFee()
+{
     double hotelFee;
     printf("Enter Hotel Fee: ");
     scanf("%f", &hotelFee);
@@ -137,7 +149,8 @@ double hotelFee() {
 // Returns amount for each meals eaten
 // Allowed meals
 
-int mealFee() {
+int mealFee()
+{
     int mealFee;
     printf("Enter Meal Fee: ");
     scanf("%d", &mealFee);
