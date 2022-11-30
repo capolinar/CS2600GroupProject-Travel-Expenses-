@@ -25,7 +25,26 @@ double conference, double hotel, double meals, int nights)
 	total += 90 * nights;//max amount for each hotel night
 
 	//meal costs depend on time
-	
+	//allowable amounts for first day
+	if(departTime < 700)
+	{
+		total += 9; //breakfast if before 7am
+	}
+	else if(departTime > 700 && departTime < 1200)
+	{
+		total += 12; //lunch if before 12pm
+
+	}
+	else if(departTime > 1200 && departTime < 1800)
+	{
+		total += 16; //dinner if before 6pm
+	}
+
+	//allowable amounts for last day
+	if(arriveTime > 800)
+	{
+		total += 9; 
+	}
 
 }
 
