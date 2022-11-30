@@ -18,6 +18,13 @@ double calcTotalAllowed(int days, int departTime, int arriveTime, double airfee,
 int cars, double miles, double parking, double taxi, 
 double conference, double hotel, double meals)
 {
+}
+
+
+double calcExcess(int days, int departTime, int arriveTime, double airfee, 
+int cars, double miles, double parking, double taxi, 
+double conference, double hotel, double meals)
+{
 	double total;
 	total += totalMiles(miles) + cars + airfee + conference;//any amount allowed
 	if(parking > 6 * days)
