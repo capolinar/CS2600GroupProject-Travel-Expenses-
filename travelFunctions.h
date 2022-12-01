@@ -27,7 +27,7 @@ double conference, double hotel, double meals)
 	int fullDays = 0;//days with no travel
 	if(days > 2)
 	{
-		fullDays = days -2 //travel days not including first or last;
+		fullDays = days -2; //travel days not including first or last;
 
 	}
 	total += fullDays * 37; //37 is total $ allowed for breakfast, lunch and dinner
