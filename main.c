@@ -113,7 +113,7 @@ int main()
 
     //display totals
     displayTotal(total);
-    displayTotalALlowed(budget);
+    displayTotalAllowed(budget);
     displayExcess(total, budget);
     
     exit(EXIT_SUCCESS);
