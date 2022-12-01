@@ -71,7 +71,7 @@ void displayTotal(double total)
 	printf("Total Expenses for whole trip: %f\n", total);
 }
 
-void displayTotal(double budget)
+void displayTotalAllowed(double budget)
 {
 	printf("Total Allowed Expenses for whole trip: %f\n", budget);
 }
