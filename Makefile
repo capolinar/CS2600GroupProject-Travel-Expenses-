@@ -1,4 +1,8 @@
 CC=gcc
 
-program: travelExpenses.c travelFunctions.h prompt.h
+program: main.c travelFunctions.h prompt.h
 	$(CC) -c main.c
+
+validInputText:
+	a.exe <validInput.txt
+	print("expected: x")
