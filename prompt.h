@@ -108,26 +108,34 @@ double hotelFee()
 	return hotelFee;
 }
 
-int mealFee(int *dTime, int *aTime) //needs to ask and determine allowable meals
+double mealFee(int *dTime, int *aTime)
 {
-	int total;
+	double total;
 
     if(dTime < 700)
     {
-        printf("Enter Meal Fee: ");
-	    scanf("%d", &total);
-        total += 9; //breakfast if before 7am
+        double breakfastCost;
+        printf("Enter Breakfast Cost: ");
+	    scanf("%d", &breakfastCost);
+        total += breakfastCost; //breakfast if before 7am
     }
     else if(dTime > 700 && dTime < 1200)
     {
-        total += 12; //lunch if before 12pm
+        double lunchCost;
+        printf("Enter Lunch Cost: ");
+	    scanf("%d", &lunchCost);
+        total += lunchCost; //lunch if before 12pm
     }
     else if(dTime > 1200 && dTime < 1800)
     {
-        total += 16; //dinner if before 6pm
+        double dinnerCost;
+        printf("Enter Lunch Cost: ");
+	    scanf("%d", &dinnerCost);
+        total += dinnerCost; //dinner if before 6pm
     }
 
-    
+    for (int i = 0; i < )
+
     //allowable amounts for last day
     if(aTime > 800 && aTime < 1300)
     {
@@ -139,8 +147,6 @@ int mealFee(int *dTime, int *aTime) //needs to ask and determine allowable meals
     }
     else if(aTime > 1900)
     {
-        printf("Enter Meal Fee: ");
-	    scanf("%d", &total);
         total += 16;//dinner if arrival after 7pm
     }
 
