@@ -16,8 +16,8 @@ int totalDays()
 void departTime(int *departTime, int *arriveTime)
 {
 	char buff[5];
-	int hour;
-	int minute;
+	int hour = 0;
+	int minute = 0;
 
 	printf("Enter depart time (24h): ");
 	scanf("%s", &buff);
@@ -146,7 +146,7 @@ double mealFee(int dTime, int aTime, int days)
 	    scanf("%f", &breakfastCost);
         printf("Enter Lunch Cost: ");
 	    scanf("%f", &lunchCost);
-        printf("Enter Lunch Cost: ");
+        printf("Enter Dinner Cost: ");
 	    scanf("%f", &dinnerCost);
     }
 
