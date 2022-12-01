@@ -25,6 +25,8 @@ double conference, double hotel, double meals)
 	double total;
 	total += airFare + rentalFee + totalMiles(miles) + parking + taxi + conference
 	+ hotel + meals;
+
+	return total;
 }
 
 double calcTotalAllowed(int days, int nights, int dTime, int aTime, double airFare, 
