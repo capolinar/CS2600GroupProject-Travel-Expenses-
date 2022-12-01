@@ -1,3 +1,4 @@
 CC=gcc
 
-program:
+program: main.c travelFunctions.h prompt.h
+	$(CC) -c main.c
