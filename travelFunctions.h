@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-double totalMiles(miles) //27 cents per mile driven
+double totalMiles(double miles) //27 cents per mile driven
 {
 	return miles * .27;
 }
 
 double calcTotal(int days, int nights, int dTime, int aTime, double airFare, 
-int rentalFee, double miles, double parking, double taxi, 
+double rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals)
 {
 	double total;
@@ -15,7 +15,7 @@ double conference, double hotel, double meals)
 }
 
 double calcTotalAllowed(int days, int nights, int dTime, int aTime, double airFare, 
-int rentalFee, double miles, double parking, double taxi, 
+double rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals)
 {
 	double total;
@@ -66,17 +66,17 @@ double conference, double hotel, double meals)
 
 }
 
-void displayTotal(total)
+void displayTotal(double total)
 {
 	printf("Total Expenses for whole trip: %f\n", total);
 }
 
-void displayTotal(budget)
+void displayTotal(double budget)
 {
 	printf("Total Allowed Expenses for whole trip: %f\n", budget);
 }
 
-void displayExcess(total, budget)
+void displayExcess(double total, double budget)
 {
 	double excess = total - budget;
 	if(excess >= 0) //if there was excess
