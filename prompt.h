@@ -18,23 +18,19 @@ void departTime(int *departTime, int *arriveTime)
 	char buff[5];
 	int hour = 0;
 	int minute = 0;
-
+    int dTime;
 	printf("Enter depart time (24h): ");
 	scanf("%s", &buff);
 
-	hour = atoi(strtok(buff, ":"));
-	minute = atoi(strtok(NULL, ":"));
-	// converting 24 hour to 12 hour
-	int dTime = hour * 100 + minute;
+    // converting 24 hour to 12 hour
+    dTime = atoi(buff);
+
 	*departTime = dTime;
 
 	printf("Enter arrive time (24h): ");
 	scanf("%s", &buff);
-
-	hour = atoi(strtok(buff, ":"));
-	minute = atoi(strtok(NULL, ":"));
-	// converting 24 hour to 12 hour
-	int aTime = hour * 100 + minute;
+    
+	int aTime = atoi(buff);
 	*arriveTime = aTime;
 }
 
@@ -119,17 +115,23 @@ double mealFee(int dTime, int aTime, int days)
     {
         printf("Enter Breakfast Cost: ");
 	    scanf("%f", &breakfastCost);
-        total += breakfastCost; //breakfast if before 7am
+        printf("Enter Lunch Cost: ");
+	    scanf("%f", &lunchCost);
+        printf("Enter Dinner Cost: ");
+	    scanf("%f", &dinnerCost);
+        total += breakfastCost + lunchCost + dinnerCost; //breakfast if before 7am
     }
     else if(dTime > 700 && dTime < 1200)
     {
         printf("Enter Lunch Cost: ");
 	    scanf("%f", &lunchCost);
-        total += lunchCost; //lunch if before 12pm
+        printf("Enter Dinner Cost: ");
+	    scanf("%f", &dinnerCost);
+        total += lunchCost + dinnerCost; //lunch if before 12pm
     }
     else if(dTime > 1200 && dTime < 1800)
     {
-        printf("Enter Lunch Cost: ");
+        printf("Enter Dinner Cost: ");
 	    scanf("%f", &dinnerCost);
         total += dinnerCost; //dinner if before 6pm
     }
@@ -159,15 +161,21 @@ double mealFee(int dTime, int aTime, int days)
     }
     else if(aTime > 1300 && aTime < 1900)
     {
+        printf("Enter Breakfast Cost: ");
+	    scanf("%d", &breakfastCost);
         printf("Enter Lunch Cost: ");
 	    scanf("%d", &lunchCost);
-        total += lunchCost; //lunch if arrival after 1pm
+        total += lunchCost + breakfastCost; //lunch if arrival after 1pm
     }
     else if(aTime > 1900)
     {
+        printf("Enter Breakfast Cost: ");
+	    scanf("%d", &breakfastCost);
         printf("Enter Lunch Cost: ");
+	    scanf("%d", &lunchCost);
+        printf("Enter Dinner Cost: ");
 	    scanf("%d", &dinnerCost);
-        total += dinnerCost; //dinner if arrival after 7pm
+        total += dinnerCost + lunchCost + breakfastCost; //dinner if arrival after 7pm
     }
 
 
