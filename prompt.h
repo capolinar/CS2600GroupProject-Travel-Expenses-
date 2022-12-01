@@ -108,46 +108,66 @@ double hotelFee()
 	return hotelFee;
 }
 
-double mealFee(int *dTime, int *aTime)
+double mealFee(int *dTime, int *aTime, int days)
 {
 	double total;
+    double breakfastCost;
+    double lunchCost;
+    double dinnerCost;
 
     if(dTime < 700)
     {
-        double breakfastCost;
         printf("Enter Breakfast Cost: ");
 	    scanf("%d", &breakfastCost);
         total += breakfastCost; //breakfast if before 7am
     }
     else if(dTime > 700 && dTime < 1200)
     {
-        double lunchCost;
         printf("Enter Lunch Cost: ");
 	    scanf("%d", &lunchCost);
         total += lunchCost; //lunch if before 12pm
     }
     else if(dTime > 1200 && dTime < 1800)
     {
-        double dinnerCost;
         printf("Enter Lunch Cost: ");
 	    scanf("%d", &dinnerCost);
         total += dinnerCost; //dinner if before 6pm
     }
 
-    for (int i = 0; i < )
+    // days inbetween
+    int fullDays = 0; //days with no travel
+    if(days > 2)
+    {
+        fullDays = days - 2; //travel days not including first or last;
+    }
+
+    for (int i = 0; i < fullDays; i++) {
+        printf("Enter Breakfast Cost: ");
+	    scanf("%d", &breakfastCost);
+        printf("Enter Lunch Cost: ");
+	    scanf("%d", &lunchCost);
+        printf("Enter Lunch Cost: ");
+	    scanf("%d", &dinnerCost);
+    }
 
     //allowable amounts for last day
     if(aTime > 800 && aTime < 1300)
     {
-        total += 9; //breakfast if arrival after 8am 
+        printf("Enter Breakfast Cost: ");
+	    scanf("%d", &breakfastCost);
+        total += breakfastCost; //breakfast if arrival after 8am 
     }
     else if(aTime > 1300 && aTime < 1900)
     {
-        total += 12; //lunch if arrival after 1pm
+        printf("Enter Lunch Cost: ");
+	    scanf("%d", &lunchCost);
+        total += lunchCost; //lunch if arrival after 1pm
     }
     else if(aTime > 1900)
     {
-        total += 16;//dinner if arrival after 7pm
+        printf("Enter Lunch Cost: ");
+	    scanf("%d", &dinnerCost);
+        total += dinnerCost; //dinner if arrival after 7pm
     }
 
 
