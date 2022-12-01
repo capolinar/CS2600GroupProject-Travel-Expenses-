@@ -5,6 +5,19 @@ double totalMiles(double miles) //27 cents per mile driven
 	return miles * .27;
 }
 
+int nightsOnTrip(int days) //determines nights stayed for trip and hotel use
+{
+	nights = days;
+	nights--; //subtract 1 night for arrival on last day of trip
+	if(days == 1) //dept and arrive same day
+	{
+		nights = 0;
+
+	}
+
+	return nights;
+}
+
 double calcTotal(int days, int nights, int dTime, int aTime, double airFare, 
 double rentalFee, double miles, double parking, double taxi, 
 double conference, double hotel, double meals)
