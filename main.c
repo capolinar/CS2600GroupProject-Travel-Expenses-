@@ -24,7 +24,7 @@ int main()
     do {
         check = 0;
         departTime(&dTime, &aTime);
-        if((dTime == 0 || dTime > 24) || (aTime == 0 || aTime > 24))
+        if((dTime == 0 || dTime > 2400) || (aTime == 0 || aTime > 2400))
         {
             check = 1;
             printf("Enter valid time for departure and arrival\n");
