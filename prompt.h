@@ -47,10 +47,10 @@ double airFee()
 	return airFee;
 }
 
-int carsRented() //name changed to rentFee()
+int rentFee()
 {
 	int carsRent;
-	printf("Enter total number of cars rented: "); //change this to "Enter total amount for car rentals: "
+	printf("Enter total amount for car rentals: ");
 	scanf("%d", &carsRent);
 
 	return carsRent;
@@ -60,7 +60,7 @@ int milesDriven()
 {
 	int miles = 0;
 	int input;
-	printf("Was a private vehicle used?\n(1) for Yes\n(2) for No");
+	printf("Was a private vehicle used?\n(1) for Yes\n(2) for No\n");
 	scanf("%d", &input);
 
 	if (input == 1)
@@ -108,11 +108,42 @@ double hotelFee()
 	return hotelFee;
 }
 
-int mealFee() //needs to ask and determine allowable meals
+int mealFee(int *dTime, int *aTime) //needs to ask and determine allowable meals
 {
-	int mealFee;
-	printf("Enter Meal Fee: ");
-	scanf("%d", &mealFee);
+	int total;
 
-	return mealFee;
+    if(dTime < 700)
+    {
+        printf("Enter Meal Fee: ");
+	    scanf("%d", &total);
+        total += 9; //breakfast if before 7am
+    }
+    else if(dTime > 700 && dTime < 1200)
+    {
+        total += 12; //lunch if before 12pm
+    }
+    else if(dTime > 1200 && dTime < 1800)
+    {
+        total += 16; //dinner if before 6pm
+    }
+
+    
+    //allowable amounts for last day
+    if(aTime > 800 && aTime < 1300)
+    {
+        total += 9; //breakfast if arrival after 8am 
+    }
+    else if(aTime > 1300 && aTime < 1900)
+    {
+        total += 12; //lunch if arrival after 1pm
+    }
+    else if(aTime > 1900)
+    {
+        printf("Enter Meal Fee: ");
+	    scanf("%d", &total);
+        total += 16;//dinner if arrival after 7pm
+    }
+
+
+	return total;
 }
