@@ -5,7 +5,7 @@
 
 int main()
 {
-    int days, nights, dTime, aTime, rentalFee, miles, meals; //changed "rents" to "rentalFee" // added "nights"
+    double days, nights, dTime, aTime, rentalFee, miles, meals; //changed "rents" to "rentalFee" // added "nights"
     double airfare, parking, taxi, conference, hotel;
     double drivingCost;
     double total, budget;
