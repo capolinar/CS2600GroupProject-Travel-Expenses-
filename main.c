@@ -5,8 +5,8 @@
 
 int main()
 {
-    double days, nights, dTime, aTime, rentalFee, miles, meals; //changed "rents" to "rentalFee" // added "nights"
-    double airfare, parking, taxi, conference, hotel;
+    int days, nights, dTime, aTime; //changed "rents" to "rentalFee" // added "nights"
+    double airfare, parking, taxi, conference, hotel, rentalFee, miles, meals; //moved a few variables to be a double
     double drivingCost;
     double total, budget;
     int check; //added a check for integrity of numbers
