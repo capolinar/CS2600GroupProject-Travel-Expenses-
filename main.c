@@ -95,7 +95,7 @@ int main()
     } while(check == 1);
     do {
         check = 0;
-        meals = mealFee(&dTime, &aTime, days); //meals need to be combined with calculating the amount of meals allowed.
+        meals = mealFee(dTime, aTime, days); //meals need to be combined with calculating the amount of meals allowed.
         if(conference < 0)
         {
             check = 1;
