@@ -47,10 +47,10 @@ double airFee()
 	return airFee;
 }
 
-int carsRented()
+int carsRented() //name changed to rentFee()
 {
 	int carsRent;
-	printf("Enter total number of cars rented: ");
+	printf("Enter total number of cars rented: "); //change this to "Enter total amount for car rentals: "
 	scanf("%d", &carsRent);
 
 	return carsRent;
@@ -108,7 +108,7 @@ double hotelFee()
 	return hotelFee;
 }
 
-int mealFee()
+int mealFee() //needs to ask and determine allowable meals
 {
 	int mealFee;
 	printf("Enter Meal Fee: ");
