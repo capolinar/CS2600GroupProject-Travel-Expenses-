@@ -36,9 +36,9 @@ void departTime(int *departTime, int *arriveTime)
 
 double airFee()
 {
-	double airFee;
+	double airFee = 0;
 	printf("Enter air fee: ");
-	scanf("%f", &airFee);
+	scanf("%lf", &airFee);
 
 	return airFee;
 }
@@ -72,7 +72,7 @@ double parkingFee()
 {
 	double parkingFee;
 	printf("Enter Parking Fee: ");
-	scanf("%f", &parkingFee);
+	scanf("%lf", &parkingFee);
 
 	return parkingFee;
 }
@@ -81,7 +81,7 @@ double taxiFee()
 {
 	double taxiFee;
 	printf("Enter Taxi Fee: ");
-	scanf("%f", &taxiFee);
+	scanf("%lf", &taxiFee);
 
 	return taxiFee;
 }
@@ -90,7 +90,7 @@ double conferenceFee()
 {
 	double conferenceFee;
 	printf("Enter Conference Fee: ");
-	scanf("%f", &conferenceFee);
+	scanf("%lf", &conferenceFee);
 
 	return conferenceFee;
 }
@@ -99,7 +99,7 @@ double hotelFee()
 {
 	double hotelFee;
 	printf("Enter Hotel Fee: ");
-	scanf("%f", &hotelFee);
+	scanf("%lf", &hotelFee);
 
 	return hotelFee;
 }
@@ -114,25 +114,25 @@ double mealFee(int dTime, int aTime, int days)
     if(dTime < 700)
     {
         printf("Enter Breakfast Cost: ");
-	    scanf("%f", &breakfastCost);
+	    scanf("%lf", &breakfastCost);
         printf("Enter Lunch Cost: ");
-	    scanf("%f", &lunchCost);
+	    scanf("%lf", &lunchCost);
         printf("Enter Dinner Cost: ");
-	    scanf("%f", &dinnerCost);
+	    scanf("%lf", &dinnerCost);
         total += breakfastCost + lunchCost + dinnerCost; //breakfast if before 7am
     }
     else if(dTime > 700 && dTime < 1200)
     {
         printf("Enter Lunch Cost: ");
-	    scanf("%f", &lunchCost);
+	    scanf("%lf", &lunchCost);
         printf("Enter Dinner Cost: ");
-	    scanf("%f", &dinnerCost);
+	    scanf("%lf", &dinnerCost);
         total += lunchCost + dinnerCost; //lunch if before 12pm
     }
     else if(dTime > 1200 && dTime < 1800)
     {
         printf("Enter Dinner Cost: ");
-	    scanf("%f", &dinnerCost);
+	    scanf("%lf", &dinnerCost);
         total += dinnerCost; //dinner if before 6pm
     }
 
@@ -145,11 +145,11 @@ double mealFee(int dTime, int aTime, int days)
 
     for (int i = 0; i < fullDays; i++) {
         printf("Enter Breakfast Cost: ");
-	    scanf("%f", &breakfastCost);
+	    scanf("%lf", &breakfastCost);
         printf("Enter Lunch Cost: ");
-	    scanf("%f", &lunchCost);
+	    scanf("%lf", &lunchCost);
         printf("Enter Dinner Cost: ");
-	    scanf("%f", &dinnerCost);
+	    scanf("%lf", &dinnerCost);
     }
 
     //allowable amounts for last day
