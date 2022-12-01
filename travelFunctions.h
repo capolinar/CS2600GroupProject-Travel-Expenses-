@@ -7,7 +7,7 @@ double totalMiles(double miles) //27 cents per mile driven
 
 int nightsOnTrip(int days) //determines nights stayed for trip and hotel use
 {
-	nights = days;
+	int nights = days;
 	nights--; //subtract 1 night for arrival on last day of trip
 	if(days == 1) //dept and arrive same day
 	{
